@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "leaflet/dist/leaflet.css";
+
+/* Design tokens from the Figma "Colors" variables */
+@theme {
+  --font-sans: "Inter Variable", Inter, system-ui, sans-serif;
+
+  --color-brand-primary: #c62833;
+  --color-brand-teal: #1d8a8a;
+  --color-brand-amber: #e0a100;
+
+  --color-surface-dark: #10202a;
+  --color-surface-dark-hover: #1c3342;
+  --color-surface-page: #f1f4f6;
+  --color-surface-subtle: #f7f9fa;
+
+  --color-line: #e1e7eb;
+  --color-line-input: #d5dce2;
+  --color-line-strong: #c9d2d9;
+
+  --color-ink: #1b2a34;
+  --color-muted: #6b7b8c;
+  --color-on-dark-muted: #a9b6c0;
+
+  --color-ok-bg: #ddf1f0;
+  --color-ok-fg: #14706f;
+  --color-busy-bg: #fbefc8;
+  --color-busy-fg: #8a6500;
+  --color-off-bg: #e4e9ed;
+  --color-off-fg: #4f5e6b;
+  --color-off-dot: #8d9bab;
+  --color-crit-bg: #f8dadc;
+  --color-crit-fg: #a11e28;
+}
+
+@layer base {
+  body {
+    @apply bg-surface-page font-sans text-sm text-ink antialiased;
+  }
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+  .leaflet-container {
+    font: inherit;
+    background: #e6ecef;
+  }
+  .leaflet-container img,
+  .leaflet-tile {
+    max-width: none !important;
+  }
+}
